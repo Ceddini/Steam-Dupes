@@ -1,30 +1,22 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="nav" class="w-full bg-blue-400 text-white mb-8">
+    <router-link to="/">Home</router-link>
   </div>
   <router-view />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<style>
+body,
+html {
+  background: #f3f3f3;
 }
+#nav > a {
+  display: inline-block;
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  @apply p-4;
+  @apply bg-blue-400;
+}
+#nav > a:hover {
+  @apply bg-blue-500;
 }
 </style>
